@@ -31,32 +31,8 @@ end
 
 acm_team(["10101", "11100", "11010", "00101"])
 
-# DESCRIPTION
-# You are given a string containing characters A and B only. 
-# Your task is to change it into a string such that there are no matching adjacent characters.
-# To do this, you are allowed to delete zero or more characters in the string.
-# Your task is to find the minimum number of required deletions.
-  
-#   Example
-#   s = AABAAB
-#   Remove an A at positions 0 and 3 to make s = ABAB in 2 deletions.
-
-# INPUT
-# ----------
-# AAAA
-# BBBBB
-# ABABABAB
-# BABABA
-# AAABBB
-
-# OUTPUT
-# ----------
-# 3
-# 4
-# 0
-# 0
-# 4
-# ---------
+# DESCRIPTION => https://www.hackerrank.com/challenges/alternating-characters/problem
+#
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
 #
@@ -100,7 +76,7 @@ end
 numbers = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
 puts very_big_sum(numbers)
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-each-with-index
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-each-with-index/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -118,7 +94,7 @@ end
 arr = ['leopard', 'bear', 'fox', 'wolf']
 puts skip_animals(arr, 2)
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-any-all-none-find
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-any-all-none-find/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -139,7 +115,7 @@ def func_find(hash)
   hash.find {|key, value| ((key.is_a? Integer) && (value.is_a? Integer) && (value < 20)) || ((key.is_a? String) && (value[0] == 'a'))}
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-group-by
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-group-by/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -148,7 +124,7 @@ def group_by_marks(marks, pass_marks)
   marks.group_by { |key, value| (value >= pass_marks) ? "Passed" : "Failed" }
 end
 
-# https://www.hackerrank.com/challenges/ruby-enumerable-collect
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-enumerable-collect/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -157,23 +133,34 @@ def rot13(secret_messages)
   secret_messages.map {|x| x.tr("a-z", "n-za-m") }
 end
 
-# https://www.hackerrank.com/challenges/ruby-methods-introduction/
-
+# https://www.hackerrank.com/challenges/ruby-methods-introduction/problem
+#
+# Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
+# github - @igoracportela
+#
 def prime?(number)
   number > 1 && (2...number).all?{ |i| number % i != 0}
 end
 
-# https://www.hackerrank.com/challenges/ruby-methods-arguments/
+# https://www.hackerrank.com/challenges/ruby-methods-arguments/problem
+#
+# Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
+# github - @igoracportela
+#
 def take(s, len=1)
   s.drop(len)
 end
 
-# https://www.hackerrank.com/challenges/ruby-methods-variable-arguments
+# https://www.hackerrank.com/challenges/ruby-methods-variable-arguments/problem
+#
+# Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
+# github - @igoracportela
+#
 def full_name(first, *rest)
   rest.reduce(first){ |k, v| "#{k} #{v}" }
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-methods-keyword-arguments
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-methods-keyword-arguments/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -195,14 +182,14 @@ def convert_temp (temp, input_scale: 'kelvin', output_scale: 'celsius')
     proc ? proc.call(temp) : temp
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-blocks/
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-blocks/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
 #
 p (1..gets.to_i).reduce(1, :*)
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-procs
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-procs/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -218,7 +205,7 @@ my_array = gets.split().map(&:to_i)
 
 puts square_of_sum(my_array, proc_square_number, proc_sum_array)
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-lambdas
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-lambdas/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -240,7 +227,7 @@ p a; p b; p c; p d; p e
 
 
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-closures
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-closures/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -281,7 +268,7 @@ lambda_message_printer(my_lambda)
 ######################################################################################
 
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-partial-applications
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-partial-applications/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -299,10 +286,7 @@ r = gets.to_i
 nCr = combination.(n)
 puts nCr.(r)
 
-
-
-
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-curry
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-curry/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -317,7 +301,7 @@ raise_to_power = power_function.curry[base]
 power = gets.to_i
 puts raise_to_power.(power)
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-introduction
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-introduction/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -336,7 +320,7 @@ Hello World and others!
 EOM
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-encoding
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-encoding/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -345,7 +329,7 @@ def transcode(text)
   text.force_encoding("UTF-8")
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-indexing
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-indexing/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -358,7 +342,7 @@ def serial_average(fixed_string)
 end
 
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-iteration
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-iteration/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -367,7 +351,7 @@ def count_multibyte_char(string)
   string.each_char.count{|char| char.bytesize > 1} 
 end
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-methods-i
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-methods-i/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
@@ -383,13 +367,12 @@ end
 def process_text(array_text) array_text.map(&:strip)*' ' end
 
 
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-methods-ii
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-strings-methods-ii/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
 #
 def mask_article(str, arr)
-    # arr.each { |i| str.gsub!(i, strike(i)) }
     arr.each{|element| str.gsub!(element, &method(:strike))}
     str
 end
@@ -398,18 +381,17 @@ def strike(str)
     "<strike>#{str}</strike>"
 end
   
-# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-lazy
+# DESCRIPTION => https://www.hackerrank.com/challenges/ruby-lazy/problem
 #
 # Author - Igor A. C. Portela | Copyright(c) 2022. All rights reserved.
 # github - @igoracportela
 #
 require 'prime'
 
-p Enumerator.new{|y|
-    Prime.each{|e|
-        y<<e if e.to_s == e.to_s.reverse
-    }
-}.take(gets.to_i)
-
-
-
+result =
+  Enumerator.new do |enum|
+    Prime.map do |prim|
+        enum << prim if prim.to_s == prim.to_s.reverse
+    end
+  end
+p result.take(gets.to_i)
