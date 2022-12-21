@@ -1,28 +1,27 @@
 # Needs inform the quantity of numbers of letters duplicate in sequence
 #
 
-def compress(str)
-  str_trait = str.split(//)
-  count = 0
-  new_str = []
-  hash = {}
-  repeated_element = ''
-  position = []
- 
-  str_trait.each_with_index do |e, i|
-    if str_trait[i] == str_trait[i+1] || str_trait[i] == str_trait[i-1]
-      count +=1
-      repeated_element = str_trait[i]
-      position << i
-      hash.store(repeated_element, [count, position])
-    end
-  end
+def compress_str(string)
+  ind = 0
+  comp_str = ""
+  len_str = string.length
+  while (ind != len_str) do
+    count = 1
 
-  hash.each do |k, v|
-    str_trait.slice!(v[1][1]..v[1].last)
-    str_trait[v[1][0]] = "#{k}x#{v[0]}"
-  end
-  puts str_trait.join('')
+    while ((ind < (len_str-1)) and (string[ind] == string[ind+1])) do
+      count += 1
+      ind += 1
+    end
+
+    if count == 1
+      comp_str = comp_str + string[ind].to_s
+    else
+      comp_str = comp_str + string[ind].to_s + count.to_s
+    end
+    ind += 1
+  end
+  comp_str
 end
- 
-puts compress("aaaaca")
+      
+puts compress_str("wwwwaaadexxxxxxywww")
+# output: w4a3dex6yw3
