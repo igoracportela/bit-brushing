@@ -170,5 +170,41 @@ result = breakingRecords scores
 
 fptr.write result.join " "
 fptr.write "\n"
-
 fptr.close()
+
+#
+# https://www.hackerrank.com/challenges/2d-array/problem
+#
+#!/bin/ruby
+
+require 'json'
+require 'stringio'
+
+#
+# Complete the 'hourglassSum' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+#
+
+def hourglass_sum(arr)
+  max_sum = -Float::INFINITY
+
+  for i in 0..3
+    for j in 0..3
+      top_row = arr[i][j..j+2].sum
+      middle_row = arr[i+1][j+1]
+      bottom_row = arr[i+2][j..j+2].sum
+      hourglass_sum = top_row + middle_row + bottom_row
+      max_sum = [max_sum, hourglass_sum].max
+    end
+  end
+
+  max_sum
+end
+
+# Get input from user
+arr = Array.new(6) { gets.strip.split.map(&:to_i) }
+
+# Call the function and print the result
+puts hourglass_sum(arr)
